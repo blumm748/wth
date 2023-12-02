@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;1,9..40,300&family=VT323&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', sans-serif;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000000;
+  overflow: hidden;
+}
+.container
+{
+  position:sticky;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text
+{
+  font-size: 300px;
+  color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.unselectable
+{  -webkit-user-select: none;
+   -webkit-touch-callout: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+.container .card
+{
+  position: absolute;
+  width: 5vw;
+  height: 80vh;
+  /*background: #000000;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0);
+  font-size: 8em;
+  font-weight: 700;
+  /*border: 10px solid rgba(0, 0, 0, 0.1);*/
+  border: none;
+  transition: 1s;
+  transform-origin: 30% 100%;
+  filter: hue-rotate(calc(var(--i)*230deg));
+  /*box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);*/
+}
+.container:hover .card
+{
+  /*Circular card deck rotation
+  transform: rotate(calc(var(--i)*40deg)) translate(calc(var(--i)* 0px), -50px);*/
+
+  /*No rotation*/
+  transform:translate(calc(var(--i)*12.5vw));
+  color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.crop-to-fit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:visible;
+}
+.card .crop-to-fit img { 
+  flex-shrink: 0;
+  min-width:100%;
+  min-height:100%
+}
+
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+.fade-In{
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}

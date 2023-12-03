@@ -4,8 +4,8 @@
 
   @font-face {
     font-family: 'AlphaLyrae';
-    src: url('/fonts/AlphaLyrae-Medium.woff2') format('woff2'),
-    url('/fonts/AlphaLyrae-Medium.woff') format('woff');
+    src: url('/click-to-see-god/font/AlphaLyrae-Medium.woff2') format('woff2'),
+    url('/click-to-see-god/font/AlphaLyrae-Medium.woff') format('woff');
     font-style: normal;
   }
   
@@ -107,10 +107,6 @@
     background-color: transparent;
     line-height: 1.35;
     padding: 6px;
-  }
-
-  .heading .mark{
-    font-family: 'AlphaLyrae';
   }
   
   img {

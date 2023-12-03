@@ -6,6 +6,24 @@ canvas {
   display: block;
 }
 
+:root {
+  --color-title-hover: magenta;
+	--color-title: #000000;
+	--color-title-opacityOff:1s;
+  --color-title-opacityOn: 1;
+}
+
+@font-face {
+	font-family: 'AlphaLyrae';
+	src: url('../fonts/AlphaLyrae-Medium.woff2') format('woff2'),
+	url('../fonts/AlphaLyrae-Medium.woff') format('woff');
+	font-style: normal;
+}
+
+@font-feature-values 'AlphaLyrae' { 
+  @styleset { ss01: 1; ss02: 2; ss03: 3; ss04: 4; ss05: 5 } 
+}
+
 .site__header,
 .site__nav-list {
   display: flex;
@@ -43,4 +61,38 @@ canvas {
 
 body{
   background-color: black;
+}
+
+.intro {
+  margin-top: var(--ww);
+  text-align:center;
+  place-items: top;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 25%;
+  justify-content: space-around;
+  align-items:baseline;
+  background: transparent;
+}
+
+.intro__title {
+  position:fixed;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'AlphaLyrae', sans-serif; 
+}
+
+.intro__title-pre1 {
+z-index: 19;
+  place-items: center;
+  margin-top: 10vh;
+  font-size: 6vw;
+  color: var(--color-title);
+  transition: var(--color-title-opacityOff);
+  opacity: 0;
+}
+
+.intro__title-pre1:hover {
+color: var(--color-title-hover);
+opacity: 1;
 }

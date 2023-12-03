@@ -1,0 +1,83 @@
+html {
+  padding: 0;
+  margin: 0;
+  font-family: aktiv-grotesk-thin, sans-serif;
+  font-weight: 100;
+  background: url('surrender.png');
+  background-size: contain;
+  background-color: black;
+  margin: 0;
+height: 100%;
+width: 100%;
+}
+
+.site__header,
+.site__nav-list {
+  display: flex;
+}
+
+.site__header {
+  position: fixed;
+  top: 0;
+  right: 1.25rem;
+  writing-mode: vertical-rl;
+  height: 100%;
+  padding: 0;
+  z-index: 20; /* to overlap the grid component */
+}
+
+.site__nav-list {
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.site__nav {
+  padding-bottom: 0;
+}
+
+.site__nav-link {
+  font-size: 16px;
+  font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.25;
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  padding-bottom: .625rem;
+}
+
+.container {
+display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  padding-top: 2vw;
+}
+
+.header {
+  margin-top: 5vw;
+}
+
+.title {
+  font-size: 5vw;
+}
+
+
+
+img {
+width: 70%;
+}
+
+.flex {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+footer {
+  padding: 2vw;
+}
+
+img {
+  border-radius: 40px;
+  width: 40vw;
+}

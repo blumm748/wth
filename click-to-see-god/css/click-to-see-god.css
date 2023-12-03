@@ -103,11 +103,14 @@
   }
   
   mark {
-    font-family: 'AlphaLyrae';
     color: #FFF;
     background-color: transparent;
     line-height: 1.35;
     padding: 6px;
+  }
+
+  .heading .mark{
+    font-family: 'AlphaLyrae';
   }
   
   img {

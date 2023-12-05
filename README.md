@@ -1,2 +1,1 @@
-# wth/oh-no.html
- 
+# https://blumm748.github.io/wth/oh-no.html

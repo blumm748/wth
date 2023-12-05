@@ -46,6 +46,13 @@ width: 100%;
   padding-bottom: .625rem;
 }
 
+.site__nav-link:hover {
+  --color-link-hover: rgb(230, 31, 31);
+color: var(--color-link-hover);
+outline: none;
+text-decoration: none;
+}
+
 .container {
 display: flex;
   justify-content: space-evenly;

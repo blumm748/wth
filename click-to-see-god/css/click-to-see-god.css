@@ -64,10 +64,14 @@
     color: #FFF;
     padding-bottom: .625rem;
   }
-  
-  .site__nav-list li:last-child .site__nav-link {
-    padding-bottom: 0;
+
+  .site__nav-link:hover {
+    --color-link-hover: rgb(48, 31, 230);
+  color: var(--color-link-hover);
+  outline: none;
+  text-decoration: none;
   }
+  
   
   .block {
     display: block;

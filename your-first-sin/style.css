@@ -41,6 +41,13 @@ canvas {
   padding-bottom: .625rem;
 }
 
+.site__nav-link:hover {
+  --color-link-hover: green;
+color: var(--color-link-hover);
+outline: none;
+text-decoration: none;
+}
+
 body{
   background-color: black;
 }

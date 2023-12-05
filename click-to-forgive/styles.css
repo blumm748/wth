@@ -1,0 +1,63 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background: black;
+}
+
+.background {
+    background-image: url('1.gif');
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.site {
+    /*background-repeat: no-repeat;*/
+    min-height: 120vh; /* allows room for scrolling to see parallax */
+    height: 100%;
+  }
+  
+  .site__header,
+  .site__nav-list {
+    display: flex;
+  }
+  
+  .site__header {
+    position: fixed;
+    top: 0;
+    right: 1.25rem;
+    writing-mode: vertical-rl;
+    height: 100%;
+    padding: 0;
+    z-index: 20; /* to overlap the grid component */
+  }
+  
+  .site__nav-list {
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  .site__nav {
+    padding-bottom: 0;
+  }
+  
+  .site__nav-link {
+    font-size: 16px;
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    line-height: 1.25;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    padding-bottom: .625rem;
+  }
+
+  a:hover {
+    --color-link-hover: blue;
+	color: var(--color-link-hover);
+	outline: none;
+	text-decoration: none;
+}

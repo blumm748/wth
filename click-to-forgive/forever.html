@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <header class="site__header">
+        <!--<p>When: <span class="block">May 10-12</span></p>
+        <p>Where: <span class="block">UCL London</span></p>-->
+         <nav class="site__nav">
+          <ul class="site__nav-list">
+            <li><a class="site__nav-link" href="../choose-your-fate.html">Already Leaving?</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+    <div class="background"></div>
+    <img id="cursorImage" src="2.png" style="position: absolute; display: none;">
+    <script>
+        var cursorImage = document.getElementById('cursorImage');
+        var imageWidth = 4000; // Width of the image
+        var imageHeight = 3000; // Height of the image
+        document.onmousemove = function(e){
+            cursorImage.style.left = (e.pageX - imageWidth / 2) + 'px';
+            cursorImage.style.top = (e.pageY - imageHeight / 2) + 'px';
+            cursorImage.style.display = "block";
+        };
+    </script>
+</body>
+</html>

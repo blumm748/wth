@@ -2,6 +2,15 @@ body, html {
     height: 100%;
     margin: 0;
     background: black;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+scrollbar-width: none; /* for Firefox */
+overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+display: none; 
+
+
 }
 
 .background {

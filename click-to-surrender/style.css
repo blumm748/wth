@@ -9,6 +9,15 @@ html {
   margin: 0;
 height: 100%;
 width: 100%;
+-ms-overflow-style: none; /* for Internet Explorer, Edge */
+scrollbar-width: none; /* for Firefox */
+overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+display: none; 
+
+
 }
 
 .site__header,

@@ -29,6 +29,7 @@ canvas {
   --mix-blend-modeOff: 0;
   --mix-blend-modeOn:1;
   --ww: 10vh;
+  --color-link-hover: #ff0000;
 }
 
 .site {
@@ -70,6 +71,12 @@ canvas {
   text-decoration: none;
   color: #FFF;
   padding-bottom: .625rem;
+}
+
+a:hover {
+	color: var(--color-link-hover);
+	outline: none;
+	text-decoration: none;
 }
 
 body {

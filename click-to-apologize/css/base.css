@@ -1,0 +1,250 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 13px;
+	--color-text: #111;
+	--color-bg: #fff;
+	--color-link: #000;
+	--color-link-hover: GREEN;
+}
+
+.site {
+	/*background-repeat: no-repeat;*/
+	min-height: 120vh; /* allows room for scrolling to see parallax */
+	height: 100%;
+  }
+  
+  .site__header,
+  .site__nav-list {
+	display: flex;
+  }
+  
+  .site__header {
+	position: fixed;
+	top: 0;
+	right: 1.25rem;
+	writing-mode: vertical-rl;
+	height: 100%;
+	padding: 0;
+	z-index: 20; /* to overlap the grid component */
+  }
+  
+  .site__nav-list {
+	justify-content: space-between;
+	list-style-type: none;
+  }
+  
+  .site__nav {
+	padding-bottom: 0;
+  }
+  
+  .site__nav-link {
+	font-size: 16px;
+	font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	line-height: 1.25;
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	padding-bottom: .625rem;
+  }
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.demo-3 {
+	background-color: #000000;
+}
+
+
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 1000;
+}
+
+.js .loading::before {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
+a {
+	text-decoration: underline;
+	color: var(--color-link);
+	outline: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: var(--color-link-hover);
+	outline: none;
+	text-decoration: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid red;
+	background: transparent;
+}
+
+.unbutton {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.unbutton:focus {
+	outline: none;
+}
+
+.frame {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem; 
+	z-index: 1;
+	pointer-events: none;
+	text-transform: uppercase;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-areas: 'title' 'links' 'demos' 'demos';
+}
+
+.frame a {
+	pointer-events: auto;
+}
+
+.frame__title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 1rem;
+	grid-area: title;
+}
+
+.frame__links,
+.frame__demos {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.frame__links {
+	grid-area: links;
+}
+
+.frame__demos {
+	grid-area: demos;
+}
+
+.frame__demo {
+	background: rgba(255, 255, 255, 0.4);
+	border: 1px solid black;
+	padding: 0.2rem 1rem;
+	border-radius: 5px;
+	text-decoration: none;
+	line-height: 2;
+	white-space: nowrap;
+}
+
+.frame__demo--current,
+.frame__demo:hover {
+	color: var(--color-link-hover);
+	background: white;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: calc(100vh - 13rem);
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#text-input {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+@media screen and (min-width: 53em) {
+	.frame {
+		grid-template-areas: 'title links' 'demos demos';
+		align-content: space-between;
+		height: 100%;
+		grid-gap: 0;
+	}
+	.frame__links {
+		justify-self: end;
+	}
+	.content {
+		height: 100vh;
+		justify-content: center;
+	}
+}

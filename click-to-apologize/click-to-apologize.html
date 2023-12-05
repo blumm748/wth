@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>    
-    <link rel="stylesheet" type="text/css" href="./css/apologize.css">
-    <title>Example of DataTransfer.setDragImage()</title>
-<meta name="viewport" content="width=device-width">
-</head>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Typing Effects with Three.js | Demo 3</title>
+		<meta name="description" content="Interactive typable 3D text with Three.js" />
+		<meta name="keywords" content="type, typography, typable, text, three.js, webgl, javascript" />
+		<meta name="author" content="Codrops" />
 
-<body>
-    <div class="container">
-    <div style="align-items: center; display: flex; justify-content: center; min-height: 32rem">
-      <div draggable="true" class="draggable" id="dragMe">Drag me</div>
-      </div>
-    </div>
-    <script src="./js/apologize.js"></script>
-</body>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		
+	</head>
+	<body class="demo-3">
+
+		<header class="site__header">
+			<!--<p>When: <span class="block">May 10-12</span></p>
+			<p>Where: <span class="block">UCL London</span></p>-->
+			 <nav class="site__nav">
+			  <ul class="site__nav-list">
+				<li><a class="site__nav-link" href="../choose-your-fate.html">Already Leaving?</a></li>
+			  </ul>
+			</nav>
+		  </header>
+	
+	<main>
+
+		<div class="content">
+			<div id="text-input" contenteditable="true" onblur="this.focus()" autofocus>
+			</div>
+			<div class="container"></div>
+		</div>
+	</main>
+
+	<script src="js/03_flowers.js" type="module"></script>
+	
+	</body>
 </html>
